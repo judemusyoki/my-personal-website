@@ -1,0 +1,189 @@
+body {
+  color: #40514E;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3.625rem; /*100% = 16px*/
+  margin: 3.125rem  auto 0 2rem;
+  text-align: left;
+}
+
+h2 {
+  color: #66BFBF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem; /*40px*/
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+
+hr {
+  border: 5px dotted #EAF6F6;
+  border-bottom: none;
+  margin: 100px auto;
+  width: 4%;
+}
+
+p {
+  line-height: 2;
+  font-size: 2.5rem;
+}
+
+a.projectsLinks {
+  color: #000000;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a.projectsLinks:hover {
+  text-decoration: underline;
+}
+
+.header {
+  color: #000000;
+  margin: 0px 0;
+  font-weight: bold;
+  text-align: right;
+  padding: 5px 40px 5px 0px;
+}
+
+.top-container {
+  background-color: #150485;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  /* position: relative; */
+}
+
+.middle-container-white {
+  color: #000000;
+  margin: 100px 0;
+  font-weight: bold;
+}
+
+.middle-container-blue {
+  background-color: #150485;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  /* position: relative; */
+}
+
+.bottom-container {
+  background-color: #66BFBF;
+  color: #EAF6F6;
+  line-height: 2;
+  padding: 40px 0 30px;
+}
+
+.intro {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.7rem;
+  padding: 20px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));  /* makes grid responsive */
+}
+
+@media(max-width:800px){
+  .grid-container {
+     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:540px){
+  .grid-container {
+     grid-template-columns: repeat(1, 1fr);
+  }
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+/* @keyframes opacity {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+} */
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+#loading {
+  text-align: center; 
+  justify-content: center;
+	margin: 100px 0 0 0;
+}
+
+#loading span {	
+	animation-name: opacity;
+  animation-duration: 0.7s;
+	animation-iteration-count: infinite;
+}
+
+/* #loading span:nth-child(2) {
+	animation-delay: 200ms;
+}
+
+#loading span:nth-child(3) {
+	animation-delay: 300ms;
+} */
+
+.text { 
+  position: relative;
+  /* display: inline-block; */
+  /* line-height: 3.625rem; */
+  /* font-size: 24px; */
+  /* color: white; */
+  /* min-width: 360px; */
+}
+
+.text::after {
+  content: "";
+  position: relative;
+  top: 0;
+  /* right: -15px; */
+  /* Remove display: inline-block if not required to be on the same line as text etc */
+  display: inline-block;
+  background-color: #ffffff;
+  justify-content: bottom;
+  width: 15px;
+  /* Set height to the line height of .text */
+  height: 3.825rem;
+  /* 
+  Animation paramaters:
+  blink = animation-name, 
+  1s = animation-duration, 
+  step-end = animation-timing-function,
+  infinite = animation-iteration-count
+  */
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
