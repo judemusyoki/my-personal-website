@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+* {
+  box-sizing: border-box; /* make sure border or padding does not affect width of element anywhere */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  /* Newly added with youtube video */
+  padding: 0px;
+  margin: 0px;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  /* margin: 0 auto; */
+}
+
+.topContainer {
+  background-color: #222222;
+  /* background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.topContainer h1 {
+  font-size: 46px;
+  margin: 0px 0px;
+  text-align: left;
+  padding-left: 0;
+}
+
+.topContainer h2 {
+  /* font-size: 46px; */
+  margin: 10px 20px;
+}
+
+.middleContainer {
+  background-color: #000000;
+  width: 100%;
+  /* margin: 3rem auto; */
+
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center; */
+}
+
+.middleContainer .contentContainer:nth-child(1) {
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-color: #d50014;
+  padding: 3rem;
+  height: 100vh;
+  /* to do font size */
+  flex-basis: 50%; /*  space eacxh div should occupy*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.middleContainer .contentContainer:nth-child(2) {
+  padding: 3rem;
+  height: 100vh;
+  /* to do font size */
+  flex-basis: 50%; /*  space eacxh div should occupy*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .middleContainer .leftside {
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-color: #d50014;
+}
+
+.middleContainer .rightside {
+  background-color: #000000;
+} */
+
+/* .middleContainer .leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+/* .middleContainer .rightside {
+  background-color: #000000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 10px;
+} */
+
+.middleContainer h1 {
+  font-size: 20px;
+}
+
+.iconsContainer {
+  margin-top: 50px;
+  display: flex;
+  width: 50vw;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fab {
+  color: #d50014;
+  font-size: 5rem;
+  margin: 10px 25px;
+}
+
+.fab:hover {
+  color: #e7e7e7;
+  font-size: 80px;
+}
+
+.local {
+  width: 5rem;
+  color: #d50014;
+  margin: 10px 25px;
+}
+
+.iconify {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .middleContainer {
+    width: 100%;
+  }
+
+  .middleContainer .contentContainer:nth-child(1) {
+    flex-basis: 100%;
+    padding: 2rem;
+  }
+  .middleContainer .contentContainer:nth-child(2) {
+    flex-basis: 100%;
+    padding: 2rem;
+  }
+}

@@ -1,29 +1,34 @@
-body {
-  color: #40514E;
-  font-family: 'Roboto Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+* {
+  box-sizing: border-box; /* make sure border or padding does not affect width of element anywhere */
   margin: 0;
-  text-align: center;
+  padding: 0;
+}
+
+body {
+  color: #40514e;
+  font-family: 'Roboto Mono', monospace;
 }
 
 h1 {
   color: #ffffff;
   font-family: 'Roboto Mono', monospace;
   font-size: 3.625rem; /*100% = 16px*/
-  margin: 3.125rem  auto 0 2rem;
+  margin: 3.125rem auto 0 2rem;
   text-align: left;
 }
 
 h2 {
-  color: #66BFBF;
+  color: #66bfbf;
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem; /*40px*/
   font-weight: normal;
   padding-bottom: 10px;
 }
 
-
 hr {
-  border: 5px dotted #EAF6F6;
+  border: 5px dotted #eaf6f6;
   border-bottom: none;
   margin: 100px auto;
   width: 4%;
@@ -54,15 +59,27 @@ a.projectsLinks:hover {
   padding: 5px 40px 5px 0px;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .top-container {
   background-color: #150485;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   /* position: relative; */
 }
 
 .middle-container-white {
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-color: #40514e;
   color: #000000;
   margin: 100px 0;
   font-weight: bold;
@@ -72,13 +89,13 @@ a.projectsLinks:hover {
   background-color: #150485;
   padding-top: 50px;
   padding-bottom: 50px;
-  justify-content: center;
+  /* justify-content: center; */
   /* position: relative; */
 }
 
 .bottom-container {
-  background-color: #66BFBF;
-  color: #EAF6F6;
+  background-color: #66bfbf;
+  color: #eaf6f6;
   line-height: 2;
   padding: 40px 0 30px;
 }
@@ -90,7 +107,7 @@ a.projectsLinks:hover {
 }
 
 .copyright {
-  color: #EAF6F6;
+  color: #eaf6f6;
   font-size: 0.7rem;
   padding: 20px 0;
 }
@@ -99,18 +116,28 @@ a.projectsLinks:hover {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 5px;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));  /* makes grid responsive */
+  grid-template-columns: repeat(
+    3,
+    minmax(240px, 1fr)
+  ); /* makes grid responsive */
 }
 
-@media(max-width:800px){
+.sectionImage {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: left;
+  margin-left: 10px;
+}
+
+@media (max-width: 800px) {
   .grid-container {
-     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width:540px){
+@media (max-width: 540px) {
   .grid-container {
-     grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .grid-item {
@@ -125,27 +152,39 @@ a.projectsLinks:hover {
 } */
 
 @-webkit-keyframes blink {
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #loading {
-  text-align: center; 
+  text-align: center;
   justify-content: center;
-	margin: 100px 0 0 0;
+  margin: 100px 0 0 0;
 }
 
-#loading span {	
-	animation-name: opacity;
+#loading span {
+  animation-name: opacity;
   animation-duration: 0.7s;
-	animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 /* #loading span:nth-child(2) {
@@ -156,7 +195,7 @@ a.projectsLinks:hover {
 	animation-delay: 300ms;
 } */
 
-.text { 
+.text {
   position: relative;
   /* display: inline-block; */
   /* line-height: 3.625rem; */
@@ -166,7 +205,7 @@ a.projectsLinks:hover {
 }
 
 .text::after {
-  content: "";
+  content: '';
   position: relative;
   top: 0;
   /* right: -15px; */
