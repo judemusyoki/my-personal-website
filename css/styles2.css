@@ -70,7 +70,7 @@ body {
 }
 
 .middleContainer .contentContainer:nth-child(2) {
-  padding: 3rem;
+  /* padding: 3rem; */
   height: 100vh;
   /* to do font size */
   flex-basis: 50%; /*  space eacxh div should occupy*/
@@ -113,33 +113,31 @@ body {
   font-size: 20px;
 }
 
-.iconsContainer {
+.middleContainer .contentContainer:nth-child(2) .iconsContainer {
   margin-top: 50px;
   display: flex;
-  width: 50vw;
+  width: 70%;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
 }
 
-.fab {
+.middleContainer .contentContainer:nth-child(2) .fab {
   color: #d50014;
   font-size: 5rem;
-  margin: 10px 25px;
 }
 
-.fab:hover {
+.middleContainer .contentContainer:nth-child(2) .fab:hover {
   color: #e7e7e7;
-  font-size: 80px;
 }
 
-.local {
+.middleContainer .contentContainer:nth-child(2) .local {
   width: 5rem;
   color: #d50014;
   margin: 10px 25px;
 }
 
-.iconify {
+.middleContainer .contentContainer:nth-child(2) .iconify {
   width: 5rem;
   height: 5rem;
 }
@@ -157,4 +155,28 @@ body {
     flex-basis: 100%;
     padding: 2rem;
   }
+}
+
+@media only screen and (max-width: 400) {
+  .middleContainer {
+    width: 100%;
+  }
+
+  .middleContainer .contentContainer:nth-child(1) {
+    flex-basis: 100%;
+    padding: 1rem;
+  }
+  .middleContainer .contentContainer:nth-child(2) {
+    flex-basis: 100%;
+    padding: 0.2rem;
+  }
+
+  /* .middleContainer .contentContainer:nth-child(2) .iconsContainer {
+    margin-top: 50px;
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+  } */
 }
