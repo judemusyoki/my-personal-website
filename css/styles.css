@@ -55,6 +55,21 @@ body {
   object-fit: cover;
 }
 
+.middleContainer {
+  width: 100%;
+  padding: 3rem 3rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.middleContainer .content {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2;
+  color: #000000;
+}
+
 @media (max-width: 700px) {
   .containerTop {
     padding: 1rem 0.5rem;
