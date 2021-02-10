@@ -3,6 +3,8 @@ body {
   font-family: 'Roboto Mono', monospace;
   margin: 0;
   text-align: center;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-color: #ffffff;
 }
 
 .containerTop {
@@ -75,13 +77,22 @@ body {
   font-size: 20px;
   font-weight: 500;
   line-height: 2;
+  padding: 1rem;
   color: #000000;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .middleContainerBlue {
-  width: 100%;
+  width: 98%;
   padding: 3rem 3rem;
+  margin: 1rem auto;
   background-color: #150485;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -139,10 +150,16 @@ body {
 }
 
 .middleContainer .testimonials {
-  height: 100vh;
+  height: 330px;
+  color: #000000;
   position: relative;
   font-size: 15px;
+  align-items: center;
   padding: 30px 80px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .progressBar {
@@ -208,7 +225,7 @@ body {
 }
 
 .middleContainerProjects {
-  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  /* background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); */
   width: 100%;
   display: flex;
   align-items: center;
@@ -230,6 +247,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 }
 
 .middleContainerProjects .buttons {
@@ -243,7 +261,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .containerTop {
     padding: 1rem 0.5rem;
   }
@@ -274,14 +292,47 @@ body {
   .fa-quote {
     display: none;
   }
+
+  .middleContainer .testimonials {
+    height: 400px;
+  }
+
+  .middleContainerBlue {
+    height: 300px;
+  }
+  .middleContainerBlue .content {
+    flex-basis: 100%;
+  }
+
+  .middleContainerProjects .project {
+    height: 400px;
+  }
 }
 
 @media (max-width: 500px) {
+  .containerTop .content:nth-child(2) h1 {
+    line-height: 1.2;
+  }
+  .containerTop .content:nth-child(2) h2 {
+    line-height: 1.5;
+  }
+  .containerTop .content:nth-child(2) h3 {
+    line-height: 1;
+  }
   .middleContainerSkills {
     padding: 1rem;
   }
 
   .middleContainerSkills .icons {
     flex-basis: 50%;
+  }
+
+  .middleContainerBlue {
+    height: 350px;
+  }
+
+  .middleContainer .testimonials {
+    height: fit-content;
+    padding: 20px 15px;
   }
 }

@@ -2,22 +2,40 @@ const textElIntro = document.getElementById('intro');
 const textElAboutMe = document.getElementById('aboutMe');
 const textElSkills = document.getElementById('skills');
 const textElTestimonials = document.getElementById('testimonials');
+const textElProjects = document.getElementById('projects');
 
 const textIntro = 'Hi, I am Jude Musyoki...';
 const textAboutMe = 'A little about me...';
 const textSkills = 'i build with...';
 const textTestimonials = 'Working with me...';
+const textProjects = 'My portfolio...';
 
 let idxIntro = 1;
 let idxAboutMe = 1;
 let idxSkills = 1;
 let idxTestimonials = 1;
+let idxProjects = 1;
 speed = 150;
 
-writeIntro();
-writeAboutMe();
-writeSkills();
-writeTestimonials();
+if (screen.width > 500) {
+  writeIntro();
+  writeAboutMe();
+  writeSkills();
+  writeTestimonials();
+  writeProjects();
+}
+
+function writeProjects() {
+  textElProjects.innerText = textProjects.slice(0, idxProjects);
+
+  idxProjects++;
+
+  if (idxProjects > textProjects.length) {
+    idxProjects = 1;
+  }
+
+  setTimeout(writeProjects, speed);
+}
 
 function writeIntro() {
   textElIntro.innerText = textIntro.slice(0, idxIntro);
