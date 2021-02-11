@@ -5,7 +5,117 @@ body {
   text-align: center;
   background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
   background-color: #ffffff;
+  height: 100vh;
 }
+
+/* Beginning of menu */
+
+.logo {
+  width: 150px;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-btn .fas {
+  font-size: 2rem;
+  color: #ffbb00;
+  transition: transform 0.1s ease;
+}
+
+.nav-btn .fas:hover {
+  color: #ffbb00;
+  transform: scale(1.1);
+}
+
+.open-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav-grey {
+  background-color: #263238;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  width: 60%;
+  max-width: 480px;
+  min-width: 320px;
+  transition-delay: 0.4s;
+}
+
+.nav-grey.nav.visible {
+  transition-delay: 0s;
+}
+
+.nav-white {
+  background-color: #ffffff;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  width: 95%;
+  transition-delay: 0.2s;
+}
+
+.nav-white.visible {
+  transition-delay: 0.2s;
+}
+
+.nav-blue {
+  background-color: #150485;
+  width: 95%;
+  padding: 40px;
+  position: relative;
+  transition-delay: 0s;
+}
+
+.nav-blue.visible {
+  transition-delay: 0.4s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li {
+  margin: 20px auto;
+}
+
+.list li a {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+}
+
+/* .list ul {
+  list-style-type: none;
+  padding-left: 20px;
+} */
+/* End of menu */
 
 .containerTop {
   width: 100%;
@@ -86,7 +196,7 @@ body {
 }
 
 .middleContainerBlue {
-  width: 98%;
+  width: 96%;
   padding: 3rem 3rem;
   margin: 1rem auto;
   background-color: #150485;
@@ -215,6 +325,7 @@ body {
 .user .userDetails a {
   text-decoration: none;
   color: #ffbb00;
+  transition: transform 0.1s ease;
   /* border-bottom: 2px solid #ffbb00;
   border-width: 30%; */
 }
@@ -222,6 +333,7 @@ body {
 .user .userDetails a:hover {
   text-decoration: none;
   color: #000000;
+  transform: scale(1.1);
 }
 
 .middleContainerProjects {
@@ -253,6 +365,63 @@ body {
 .middleContainerProjects .buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.middleContainerProjects .buttons a {
+  text-decoration: none;
+  color: #ffbb00;
+  transition: transform 0.1s ease;
+}
+
+.middleContainerProjects .buttons a:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+.footer {
+  width: 96%;
+  /* height: 200px; */
+  background-color: #263238;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+.footer .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.footer .copyrightContainer {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .contacts a {
+  text-decoration: none;
+}
+
+.footer .contacts .fab {
+  font-size: 4rem;
+  color: #ffffff;
+  margin: 0 30px;
+  display: flex;
+  transition: transform 0.1s ease;
+}
+
+.footer .fab:hover {
+  color: #ffbb00;
+  transform: scale(1.1);
 }
 
 @keyframes grow {
@@ -334,5 +503,15 @@ body {
   .middleContainer .testimonials {
     height: fit-content;
     padding: 20px 15px;
+  }
+
+  .footer {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .footer .contacts .fab {
+    font-size: 2rem;
+    margin: 0 15px;
   }
 }

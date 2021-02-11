@@ -1,3 +1,14 @@
+const openBtn = document.querySelector('.open-btn');
+const closeBtn = document.querySelector('.close-btn');
+const nav = document.querySelectorAll('.nav');
+
+openBtn.addEventListener('click', () => {
+  nav.forEach((navEl) => navEl.classList.add('visible'));
+});
+closeBtn.addEventListener('click', () => {
+  nav.forEach((navEl) => navEl.classList.remove('visible'));
+});
+
 const textElIntro = document.getElementById('intro');
 const textElAboutMe = document.getElementById('aboutMe');
 const textElSkills = document.getElementById('skills');
@@ -7,8 +18,8 @@ const textElProjects = document.getElementById('projects');
 const textIntro = 'Hi, I am Jude Musyoki...';
 const textAboutMe = 'A little about me...';
 const textSkills = 'i build with...';
-const textTestimonials = 'Working with me...';
-const textProjects = 'My portfolio...';
+const textTestimonials = 'working with me...';
+const textProjects = 'my portfolio...';
 
 let idxIntro = 1;
 let idxAboutMe = 1;
@@ -62,7 +73,7 @@ function writeAboutMe() {
 }
 
 function writeSkills() {
-  textElSkills.innerText = textTestimonials.slice(0, idxSkills);
+  textElSkills.innerText = textSkills.slice(0, idxSkills);
 
   idxSkills++;
 
@@ -135,3 +146,13 @@ function updateTestimonial() {
 }
 
 setInterval(updateTestimonial, 7000);
+
+/* Copyright date */
+
+const textElCopyright = document.getElementById('copyright');
+
+const year = new Date().getFullYear();
+
+const textCopyright = '© ' + year + ' Jude Musyoki';
+
+textElCopyright.innerHTML = textCopyright;
