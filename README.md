@@ -1,3 +1,3 @@
 # my personal website
 
-My simple personal website build with HTML & CSS
+My personal website(postfolio) build with HTML & CSS
