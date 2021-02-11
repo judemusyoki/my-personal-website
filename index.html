@@ -61,17 +61,6 @@
   </head>
 
   <body>
-    <!-- <div class="header">
-      <a class="projectsLinks" style="padding-right: 10px;" href="https://twitter.com/digitalfiddler" target="_blank">
-        <img class="sectionImage" src="images/twitter.png" alt="Twitter-logo" />
-      </a>
-      <a class="projectsLinks" style="padding-right: 10px;" href="https://www.linkedin.com/in/judemusyoki/" target="_blank">
-        <img class="sectionImage" src="images/linkedin.png" alt="linkedin-logo" />
-      </a>
-      <a class="projectsLinks" style="padding-right: 10px;" href="https://github.com/judemusyoki" target="_blank">
-        <img class="sectionImage" src="images/github.png" alt="linkedin-logo" />
-      </a>
-    </div> -->
 
     <button class="nav-btn open-btn">
       <i class="fas fa-bars"></i>
@@ -85,10 +74,11 @@
           </button>
 
           <ul class="list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Tech Stack</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#aboutMe">About</a></li>
+            <li><a href="/#skillsSection">Tech Stack</a></li>
+            <li><a href="/#testimonialsSection">Testimonials</a></li>
+            <li><a href="/#portfolioSection">Portfolio</a></li>
             <li><a href="#">Contact Me</a></li>
           </ul>
         </div>
@@ -122,11 +112,11 @@
           marketing I have a keen interest in user centered design.
         </p>
         <p>
-          I enjoy identifying and solving problems creatively to deliver clean,
-          creative and user-friendly experience. I also like to break down
+          I enjoy identifying and solving problems creatively to deliver clean
+          and creative code. I also like to break down
           problems into smaller chunks before even beginning to write any code.
           This way research, design & development can be done with a proper plan
-          in place.
+          in place. I work primarily with React Js
         </p>
         <p>
           My marketing experience gives me a user's perspective to ensure what
@@ -138,13 +128,14 @@
           reusable.
         </p>
         <p>
-          I have worked extensively in Kenya, India and now you can find me
-          based in Aarhus Denmark.
+          You can find me building we websites from scratch, using Wordpress or
+          building web application using React Js together with other frameworks 
+          and technologies mentioned below.
         </p>
       </div>
     </div>
 
-    <div class="middleContainerBlue">
+    <div id="skillsSection" class="middleContainerBlue">
       <div class="content">
         <img
           class="sectionImage"
@@ -164,7 +155,7 @@
       <i class="icons fab fa-react" title="React Js"></i>
       <i class="icons fab fa-sass" title="Sass"></i>
       <i class="icons fab fa-node" title="Node Js & Express"></i>
-      <i class="icons fab fa-bootstrap" title="Bootstrap"></i>
+      <i class="icons fab fa-wordpress-simple" title="Wordpress"></i>
       <i class="icons fab fa-github" title="GitHub"></i>
       <i class="icons fas fa-server" title="Express"></i>
       <img class="fab local" id="graphql" src="/images/logos/graphQlGrey.png" onmouseover="this.src='/images/logos/graphQlBlue.png'" onmouseout="this.src='/images/logos/graphQlGrey.png'" title="GraphQl"></img>
@@ -173,7 +164,7 @@
       <img class="fab local" id="materialUi"src="/images/logos/materialUiLogo.svg" title="Material UI"></img>
     </div>
 
-    <div class="middleContainerBlue">
+    <div id="testimonialsSection" class="middleContainerBlue">
       <div class="content">
         <img
           class="sectionImage"
@@ -207,7 +198,7 @@
           />
           <div class="userDetails">
             <h4 class="username">Anders Hinrichs</h4>
-            <p class="role">Director Business Development, WasteHero</p>
+            <p class="role">Director Business Development</p>
             <p>
               <a
                 class="companyWebsite"
@@ -222,7 +213,7 @@
       </div>
     </div>
 
-    <div class="middleContainerBlue">
+    <div id="portfolioSection" class="middleContainerBlue">
       <div class="content">
         <img class="sectionImage" 
           src="images/projects.png" 
@@ -266,17 +257,66 @@
         <div class="projectInfo">
           <h3>Github </h3>
           <p class="projectDescription">
-            A todo list app built using React Js, Material UI and Firebase. The app uses local storage store data saved across browser sessions.
+            An mini app built to search for Github profiles built using JavaScript that uses the Github API to query data.
           </p>
           <div class="buttons">
             <a class="button" href="https://nostalgic-hugle-9d78a6.netlify.app/" target="_blank" rel="noreferrer noopener">See Live</a>
-            <a class="button" href="https://github.com/judemusyoki/todos-react" target="_blank" rel="noreferrer noopener">Source Code</a>
+            <a class="button" href="https://github.com/judemusyoki/github_profiles" target="_blank" rel="noreferrer noopener">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="projectInfo">
+          <h3>Feel Good Clothing</h3>
+          <p class="projectDescription">
+            An ecommerce app that is created to master React, Redux, Hooks, Firebase authenitcation, Firebase databse, GraphQl & Stripe. This app is currently still in development.
+          </p>
+          <div class="buttons">
+            <a class="button" href="https://feel-good-clothing-live.herokuapp.com/" target="_blank" rel="noreferrer noopener">See Live</a>
+            <a class="button" href="https://github.com/judemusyoki/feel-good-clothing" target="_blank" rel="noreferrer noopener">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="projectInfo">
+          <h3>Cafe Smaglos (Client)</h3>
+          <p class="projectDescription">
+            I built a single page website for a popular cafe in Aarhus Denmark. The client needed a simple, elegant website that reflected the cafe's vibe and theme. I used Worpdress to develop the website according to the client's needs.
+          </p>
+          <div class="buttons solo">
+            <a class="button" href="http://xn--cafesmagls-8cb.com/" target="_blank" rel="noreferrer noopener">See Live</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="projectInfo">
+          <h3>Active Lema (Client)</h3>
+          <p class="projectDescription">
+            The client was a certified personal trainer who needed a website that captured his brand and communicated effectively to potential customers. I used Wordpress to develop a polished website that was brand aligned and informative to potential customers on my client's services.
+          </p>
+          <div class="buttons solo">
+            <a class="button" href="https://activelemafit.com/" target="_blank" rel="noreferrer noopener">See Live</a>
           </div>
         </div>
       </div>
 
     </div>
-    
+
+    <div class="contactContainer">
+      <div class="contactContent">
+        <h2>Let's get in touch</h2>
+        <div class="contentInfo">
+          <i class="far fa-envelope-open"></i>
+          <p class="contactMe">
+            judemusyoki@gmail.com
+          </p>
+          
+        </div>
+      </div>
+    </div>
     
 
     <div class="footer">

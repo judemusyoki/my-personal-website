@@ -124,6 +124,15 @@ const testimonials = [
     text:
       'Working with Jude has been a real pleasure. He has helped me develop a good and smooth homepage for my café. We have had a few, but very constructive meetings, where we discussed the project, and how the work-process would work out. I am not a tech geek, therefore I expressed what I felt was important in the homepage as a café owner. Jude listened to my needs, and created a functional and good looking website that appeals to the café’s theme and vibe.',
   },
+  {
+    name: 'Nuru Lema',
+    image: './images/user_images/nuru.jpg',
+    position: 'Founder & MD',
+    company: 'Active Lemafit',
+    website: 'https://activelemafit.com/',
+    text:
+      'As a client I love how my ideas were polished and translated into a user friendly and aesthetically pleasing web page.',
+  },
 ];
 
 let idx = 1;
